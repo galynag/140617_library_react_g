@@ -1,0 +1,44 @@
+.app {
+  display: flex;
+}
+
+aside.primary-aside {
+  width: 200px;
+}
+
+aside.primary-aside a.active {
+    font-weight: bold;
+}
+
+main {
+  flex: 1;
+}
+body {
+    background-image: url('../img/background1.jpg');
+    background-size: cover;
+}
+.container {
+    width: 80%;
+    margin: 30px auto;
+}
+aside {
+    width: 20%;
+    display: inline-block;
+}
+main {
+    width: 80%;
+    display: inline-block;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+    background: lightgrey;
+    border-radius: 3px;
+    text-align: center;
+    margin: 5px 20px 5px 0;
+}
+aside {
+    vertical-align: top;
+}
