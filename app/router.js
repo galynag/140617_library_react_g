@@ -7,17 +7,18 @@ import BooksList from './components/books_list';
 import BookProfile from './components/book_profile';
 import AuthorsList from './components/authors_list';
 import GenresList from './components/genres_list';
+import GenresProfile from './components/genres_profile';
 
 export default (
     <Router history={browserHistory}>
         <Route component={MainLayout}>
             <Route path="/" component={Home} />
-            <Route path="/books">
-                <Route  component={SearchLayout}>
+            <Route path="/authors" >
+                <Route  component={SearchLayout} >
                     <IndexRoute component={AuthorsList} />
                 </Route>
-                <Route path="/books/author/booklistId" component={BooksList} />
-                <Route path="/books/author/booklistId/bookId" component={BookProfile} />
+                <Route path="/authors/:booklistId" component={BooksList} />
+                <Route path="/authors/:booklistId/:bookId" component={BookProfile} />
 
 
             </Route>
@@ -25,6 +26,7 @@ export default (
                 <Route component={SearchLayout}>
                     <IndexRoute component={GenresList} />
                 </Route>
+                <Route path="/genres/:fkljbhdfjgb" component={GenresProfile} />
             </Route>
         </Route>
     </Router>

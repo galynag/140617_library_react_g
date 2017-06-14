@@ -19798,6 +19798,10 @@
 	
 	var _genres_list2 = _interopRequireDefault(_genres_list);
 	
+	var _genres_profile = __webpack_require__(224);
+	
+	var _genres_profile2 = _interopRequireDefault(_genres_profile);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = _react2.default.createElement(
@@ -19809,14 +19813,14 @@
 	        _react2.default.createElement(_reactRouter.Route, { path: '/', component: _home2.default }),
 	        _react2.default.createElement(
 	            _reactRouter.Route,
-	            { path: '/books' },
+	            { path: '/authors' },
 	            _react2.default.createElement(
 	                _reactRouter.Route,
 	                { component: _search_layout2.default },
 	                _react2.default.createElement(_reactRouter.IndexRoute, { component: _authors_list2.default })
 	            ),
-	            _react2.default.createElement(_reactRouter.Route, { path: '/books/author/booklistId', component: _books_list2.default }),
-	            _react2.default.createElement(_reactRouter.Route, { path: '/books/author/booklistId/bookId', component: _book_profile2.default })
+	            _react2.default.createElement(_reactRouter.Route, { path: '/authors/:booklistId', component: _books_list2.default }),
+	            _react2.default.createElement(_reactRouter.Route, { path: '/authors/:booklistId/:bookId', component: _book_profile2.default })
 	        ),
 	        _react2.default.createElement(
 	            _reactRouter.Route,
@@ -19825,7 +19829,8 @@
 	                _reactRouter.Route,
 	                { component: _search_layout2.default },
 	                _react2.default.createElement(_reactRouter.IndexRoute, { component: _genres_list2.default })
-	            )
+	            ),
+	            _react2.default.createElement(_reactRouter.Route, { path: '/genres/:fkljbhdfjgb', component: _genres_profile2.default })
 	        )
 	    )
 	);
@@ -24971,8 +24976,8 @@
 	                            null,
 	                            _react2.default.createElement(
 	                                _reactRouter.Link,
-	                                { to: '/books' },
-	                                'Books'
+	                                { to: '/authors' },
+	                                'Authors'
 	                            )
 	                        ),
 	                        _react2.default.createElement(
@@ -25170,7 +25175,7 @@
 	                    null,
 	                    _react2.default.createElement(
 	                        _reactRouter.Link,
-	                        { to: 'books/author/booklist/book' },
+	                        { to: '/authors/booklistertyrthh/book' },
 	                        'book 1'
 	                    )
 	                ),
@@ -25179,7 +25184,7 @@
 	                    null,
 	                    _react2.default.createElement(
 	                        _reactRouter.Link,
-	                        { to: 'books/author/booklist/book' },
+	                        { to: '/authors/booklistertyrthh/book' },
 	                        'book 2'
 	                    )
 	                ),
@@ -25188,7 +25193,7 @@
 	                    null,
 	                    _react2.default.createElement(
 	                        _reactRouter.Link,
-	                        { to: 'books/author/booklist/book' },
+	                        { to: '/authors/booklistertyrthh/book' },
 	                        'book 3'
 	                    )
 	                ),
@@ -25197,7 +25202,7 @@
 	                    null,
 	                    _react2.default.createElement(
 	                        _reactRouter.Link,
-	                        { to: 'books/author/booklist/book' },
+	                        { to: '/authors/booklistertyrthh/book' },
 	                        'book 4'
 	                    )
 	                ),
@@ -25206,7 +25211,7 @@
 	                    null,
 	                    _react2.default.createElement(
 	                        _reactRouter.Link,
-	                        { to: 'books/author/booklist/book' },
+	                        { to: '/authors/booklistertyrthh/book' },
 	                        'book 5'
 	                    )
 	                ),
@@ -25215,11 +25220,11 @@
 	                    null,
 	                    _react2.default.createElement(
 	                        _reactRouter.Link,
-	                        { to: 'books/author/booklist/book' },
+	                        { to: '/authors/booklistertyrthh/book' },
 	                        'book 6'
 	                    )
 	                )
-	            ) / author;
+	            );
 	        }
 	    }]);
 	
@@ -25325,7 +25330,7 @@
 	                    null,
 	                    _react2.default.createElement(
 	                        _reactRouter.Link,
-	                        { to: 'books/author/booklist' },
+	                        { to: '/authors/booklist' },
 	                        'author 1'
 	                    )
 	                ),
@@ -25334,7 +25339,7 @@
 	                    null,
 	                    _react2.default.createElement(
 	                        _reactRouter.Link,
-	                        { to: 'books/author/booklist' },
+	                        { to: '/authors/booklist' },
 	                        'author 2'
 	                    )
 	                ),
@@ -25343,7 +25348,7 @@
 	                    null,
 	                    _react2.default.createElement(
 	                        _reactRouter.Link,
-	                        { to: 'books/author/booklist' },
+	                        { to: '/authors/booklist' },
 	                        'author 3'
 	                    )
 	                ),
@@ -25352,7 +25357,7 @@
 	                    null,
 	                    _react2.default.createElement(
 	                        _reactRouter.Link,
-	                        { to: 'books/author/booklist' },
+	                        { to: '/authors/booklist' },
 	                        'author 4'
 	                    )
 	                ),
@@ -25361,7 +25366,7 @@
 	                    null,
 	                    _react2.default.createElement(
 	                        _reactRouter.Link,
-	                        { to: 'books/author/booklist' },
+	                        { to: '/authors/booklist' },
 	                        'author 5'
 	                    )
 	                ),
@@ -25370,7 +25375,7 @@
 	                    null,
 	                    _react2.default.createElement(
 	                        _reactRouter.Link,
-	                        { to: 'books/author/booklist' },
+	                        { to: '/authors/booklist' },
 	                        'author 6'
 	                    )
 	                ),
@@ -25379,7 +25384,7 @@
 	                    null,
 	                    _react2.default.createElement(
 	                        _reactRouter.Link,
-	                        { to: 'books/author/booklist' },
+	                        { to: '/authors/booklist' },
 	                        'author 7'
 	                    )
 	                )
@@ -25437,32 +25442,56 @@
 	                _react2.default.createElement(
 	                    'li',
 	                    null,
-	                    'Genres 1'
+	                    _react2.default.createElement(
+	                        _reactRouter.Link,
+	                        { to: '/genres/genres_item' },
+	                        'Genres 1'
+	                    )
 	                ),
 	                _react2.default.createElement(
 	                    'li',
 	                    null,
-	                    'Genres 2'
+	                    _react2.default.createElement(
+	                        _reactRouter.Link,
+	                        { to: '/genres/genres_item' },
+	                        'Genres 2'
+	                    )
 	                ),
 	                _react2.default.createElement(
 	                    'li',
 	                    null,
-	                    'Genres 3'
+	                    _react2.default.createElement(
+	                        _reactRouter.Link,
+	                        { to: '/genres/genres_item' },
+	                        'Genres 3'
+	                    )
 	                ),
 	                _react2.default.createElement(
 	                    'li',
 	                    null,
-	                    'Genres 4'
+	                    _react2.default.createElement(
+	                        _reactRouter.Link,
+	                        { to: '/genres/genres_item' },
+	                        'Genres 4'
+	                    )
 	                ),
 	                _react2.default.createElement(
 	                    'li',
 	                    null,
-	                    'Genres 5'
+	                    _react2.default.createElement(
+	                        _reactRouter.Link,
+	                        { to: '/genres/genres_item' },
+	                        'Genres 5'
+	                    )
 	                ),
 	                _react2.default.createElement(
 	                    'li',
 	                    null,
-	                    'Genres 6'
+	                    _react2.default.createElement(
+	                        _reactRouter.Link,
+	                        { to: '/genresfghdfjhs/genres_item' },
+	                        '\u041A\u0440\u043E\u043C\u0435 \u044D\u0442\u043E\u0433\u043E \u043F\u0443\u043D\u043A\u0442\u0430 \u0432\u0441\u0435 \u0441\u0441\u044B\u043B\u043A\u0438 \u0440\u0430\u0431\u043E\u0447\u0438\u0435. \u041F\u043E\u043F\u0440\u043E\u0431\u0443\u0439 \u043C\u0435\u043D\u044F \u0438 \u0443\u0432\u0438\u0434\u0438\u0448\u044C \u043E\u0448\u0438\u0431\u043A\u0443. \u0412\u0430\u0436\u043D\u043E! \u0415\u0441\u043B\u0438 \u0432 Router \u0441\u0441\u044B\u043B\u043A\u0430 \u0431\u0443\u0434\u0435\u0442 \u0443\u043A\u0430\u0437\u0430\u043D\u0430 \u0431\u0435\u0437 \u0437\u043D\u0430\u043A\u0430 :, \u0442\u043E \u0432 \u043B\u0438\u043D\u043A\u0435 \u0434\u043E\u043B\u0436\u043D\u043E \u0431\u044B\u0442\u044C \u0442\u043E\u0436\u0434\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u043E\u0435 \u0440\u0430\u0432\u0435\u043D\u0441\u0442\u0432\u043E \u0442\u0435\u043A\u0441\u0442\u0430 \u0432 \u0441\u043E\u043E\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0443\u044E\u0449\u0435\u043C \u0443\u0440\u043E\u0432\u043D\u0435'
+	                    )
 	                )
 	            );
 	        }
@@ -25473,6 +25502,58 @@
 	
 	exports.default = Genres;
 	;
+
+/***/ }),
+/* 224 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by Galina on 14.06.2017.
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+	
+	
+	var GenresProfile = function (_Component) {
+	    _inherits(GenresProfile, _Component);
+	
+	    function GenresProfile() {
+	        _classCallCheck(this, GenresProfile);
+	
+	        return _possibleConstructorReturn(this, (GenresProfile.__proto__ || Object.getPrototypeOf(GenresProfile)).apply(this, arguments));
+	    }
+	
+	    _createClass(GenresProfile, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'h3',
+	                null,
+	                'Genres Item'
+	            );
+	        }
+	    }]);
+	
+	    return GenresProfile;
+	}(_react.Component);
+	
+	exports.default = GenresProfile;
 
 /***/ })
 /******/ ]);
